@@ -81,8 +81,8 @@ export const Homepage = () => {
     <Column>
     <div className="hero-text">
     <Heading>
-        Brush up your knowledge
-        <br /> by taking <strong> Quizzes</strong>
+       Unlock Your Knowledge! Take Our  <strong> Quiz</strong>and Discover How Smart You Really Are
+       
       </Heading>
 
       <button onClick={() => navigate('/quiz')}>Start Quiz</button>
