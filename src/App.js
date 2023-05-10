@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+
+import { Homepage } from "./pages/Homepage";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./globalStyles";
+import Quiz from "./pages/Quizpage";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import theme from "./utils/theme";
 
 function App() {
+  const ChildComponent = () => {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="quiz" element={<Quiz />} />
+        </Routes>
+      </Router>
+    );
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Layout>
+        <ChildComponent />
+      </Layout>
+    </ThemeProvider>
   );
 }
 
