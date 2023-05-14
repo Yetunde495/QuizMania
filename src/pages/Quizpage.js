@@ -154,11 +154,10 @@ const Quiz = () => {
             <button
               className="start"
               onClick={() => {
-                console.log(questions);
                 startTrivia();
               }}
             >
-             {loading ? 'Loading Questions' : 'Start Quiz'}
+              {loading ? "Loading Questions" : "Start Quiz"}
             </button>
           </div>
           {questions.length > 0 ? (
@@ -166,7 +165,7 @@ const Quiz = () => {
               {!gameOver ? (
                 <div>
                   <p className="score">
-                    Score: {score} / {TOTAL_QUESTIONS}
+                    Your Score: {score} / {TOTAL_QUESTIONS}
                   </p>
                   {error === true ? (
                     <p className="error">
@@ -236,7 +235,6 @@ export const Wrapper = styled.div`
     color: #333;
     font-weight: 600;
   }
- 
 
   .button-wrapper {
     display: flex;
@@ -259,6 +257,10 @@ export const Wrapper = styled.div`
   }
   .start {
     width: 200px;
+  }
+  .score {
+    font-weight: 500;
+    font-size: 16px;
   }
   .error {
     color: #ff0000;

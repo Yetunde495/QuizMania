@@ -81,7 +81,7 @@ export const Homepage = () => {
     <Column>
     <div className="hero-text">
     <Heading>
-       Unlock Your Knowledge! Take Our  <strong> Quiz</strong>and Discover How Smart You Really Are
+       Unlock Your Knowledge! Take Our  <strong> Quiz</strong> and Discover How Smart You Really Are
        
       </Heading>
 
